@@ -19,7 +19,7 @@ const Home: React.FC<HomeProps> = () => {
         <main className="container">
             <section className="row my-2 justify-content-center">
                 {chirps.map(chirp => (
-                    <ChirpCard chirp={chirp} />
+                    <ChirpCard key={`chirp-card-home-${chirp.id}`} chirp={chirp} />
                 ))}
             </section>
         </main>
