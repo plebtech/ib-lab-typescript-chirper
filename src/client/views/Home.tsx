@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { useState, useEffect } from 'react';
+import { IChirp } from '../utils/types';
 import ChirpCard from '../components/ChirpCard';
 
 const Home: React.FC<HomeProps> = () => {
@@ -24,12 +25,6 @@ const Home: React.FC<HomeProps> = () => {
         </main>
     );
 };
-
-interface IChirp {
-    id: string;
-    username: string;
-    content: string;
-}
 
 interface HomeProps { }
 

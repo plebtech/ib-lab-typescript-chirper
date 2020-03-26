@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { IChirp } from '../utils/types';
 
 const ChirpCard: React.FC<ChirpCardProps> = props => {
     return(
@@ -7,11 +8,7 @@ const ChirpCard: React.FC<ChirpCardProps> = props => {
 }
 
 interface ChirpCardProps {
-    chirp: {
-        id: string;
-        username: string;
-        content: string;
-    }
+    chirp: IChirp,
 }
 
 export default ChirpCard;
