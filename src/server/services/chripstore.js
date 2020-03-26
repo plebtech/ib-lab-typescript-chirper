@@ -32,7 +32,7 @@ let writeChirps = () => {
     fs.writeFileSync('chirps.json', JSON.stringify(chirps));
 };
 
-module.exports = {
+export default {
     CreateChirp: createChirp,
     DeleteChirp: deleteChirp,
     GetChirps: getChirps,
