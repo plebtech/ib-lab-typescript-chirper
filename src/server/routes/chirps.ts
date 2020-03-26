@@ -6,7 +6,15 @@ const router = Router();
 // GET api/chirps
 router.get('/', (req, res) => {
     const data = ChirpStore.GetChirps();
-    res.json(data);
+    const chirps = Object.keys(data).map(key => {
+        return {
+            id: key,
+            username: data[key].username,
+            content: data[key].content,
+        }
+    });
+    chirps.pop();
+    res.json(chirps);
 });
 
 // GET /api/chirps/:chirpid
