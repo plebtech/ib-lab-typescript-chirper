@@ -31,7 +31,7 @@ const Details: React.FC<DetailsProps> = () => {
                             <h4 className="card-title">@{chirp.username}</h4>
                             <p className="card-text">{chirp.content}</p>
                             <div className="d-flex justify-content-end align-items-center">
-                                <button onClick={() => history.goBack()} className="btn btn-outline-primary mx-1">go back.</button>
+                                <button onClick={() => history.push(`/`)} className="btn btn-outline-primary mx-1">go home.</button>
                                 <Link className="btn btn-outline-secondary mx-1" to={`/admin/${chirp.id}`}>edit.</Link>
                             </div>
                         </div>
